@@ -1,0 +1,88 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { HelpCircle, MessagesSquare } from 'lucide-react';
+
+const CaseStudy = () => {
+  return (
+    <div className="h-full flex flex-col p-4">
+      {/* Header Section */}
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="flex items-center gap-4 mb-6"
+      >
+        <div className="p-3 glass-card" style={{ borderRadius: '16px' }}>
+          <HelpCircle color="var(--accent)" size={28} />
+        </div>
+        <h2 style={{ fontSize: '2.5rem' }}>Studi Kasus</h2>
+      </motion.div>
+
+      {/* Main Content: Separated Blocks for Breathability */}
+      <div className="flex-grow flex flex-col gap-8 overflow-visible">
+        
+        {/* Block 1: Scenario Only */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="glass-card p-8 relative"
+          style={{ background: 'rgba(255, 255, 255, 0.03)', borderLeft: '12px solid var(--primary)', borderRadius: '24px' }}
+        >
+          <div className="absolute" style={{ top: '-15px', left: '30px', background: 'var(--primary)', padding: '4px 15px', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '1px' }}>
+            SKENARIO
+          </div>
+          <p style={{ fontSize: '1.4rem', lineHeight: '1.6', fontWeight: 500, marginTop: '0.5rem' }}>
+            "Saat jam istirahat, kamu melihat seorang teman baru yang duduk sendirian di pojok kelas. 
+            Ia terlihat sedih dan tidak membawa bekal makanan. Teman-teman yang lain sedang asyik bermain sendiri."
+          </p>
+        </motion.div>
+
+        {/* Block 2: Options Grid (Separated) */}
+        <div className="grid grid-cols-2 gap-6">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            whileHover={{ scale: 1.02, backgroundColor: 'rgba(78, 205, 196, 0.1)' }}
+            className="glass-card p-6"
+            style={{ border: '2px solid rgba(78, 205, 196, 0.3)' }}
+          >
+            <h4 style={{ color: 'var(--secondary)', marginBottom: '0.5rem', fontSize: '1.2rem' }}>Opsi Kasih A:</h4>
+            <p style={{ fontSize: '1.05rem', opacity: 0.9 }}>Menghampirinya, mengajaknya berkenalan, dan berbagi bekal makananmu dengannya.</p>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            whileHover={{ scale: 1.02, backgroundColor: 'rgba(255, 107, 107, 0.1)' }}
+            className="glass-card p-6"
+            style={{ border: '2px solid rgba(255, 107, 107, 0.3)' }}
+          >
+            <h4 style={{ color: 'var(--primary)', marginBottom: '0.5rem', fontSize: '1.2rem' }}>Opsi Kasih B:</h4>
+            <p style={{ fontSize: '1.05rem', opacity: 0.9 }}>Mengajaknya bergabung bermain bersama teman-teman yang lain agar ia tidak merasa kesepian.</p>
+          </motion.div>
+        </div>
+
+      </div>
+
+      {/* Footer: Discussion */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className="mt-6 flex items-center gap-6 p-5"
+        style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '24px', border: '2px solid var(--glass-border)' }}
+      >
+        <div className="p-3" style={{ background: 'rgba(78, 205, 196, 0.1)', borderRadius: '16px' }}>
+          <MessagesSquare size={28} color="var(--secondary)" />
+        </div>
+        <p style={{ fontSize: '1.1rem', opacity: 0.9 }}>
+          <strong>Diskusi:</strong> Menurutmu, tindakan mana yang paling menunjukkan kasih?
+        </p>
+      </motion.div>
+
+    </div>
+  );
+};
+
+export default CaseStudy;
