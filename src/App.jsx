@@ -404,7 +404,7 @@ const App = () => {
           </h2>
           <div className="w-full max-w-2xl glass-card p-8 relative">
             <div
-              className="absolute -top-6 -right-6 p-3 rounded-full rotate-12"
+              className="absolute -top-6 -right-6 p-3 rounded-full rotate-12 hidden md:block"
               style={{ background: "var(--accent)" }}
             >
               <Sparkles className="text-black" />
