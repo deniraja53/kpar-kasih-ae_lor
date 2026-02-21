@@ -26,7 +26,7 @@ function Slot({ index, filled, slotRef }) {
     <div
       ref={slotRef}
       style={{
-        flex: 1,
+        aspectRatio: "16/9",
         borderRadius: "8px",
         border: filled
           ? "2px solid rgba(255,42,109,0.9)"
@@ -39,14 +39,13 @@ function Slot({ index, filled, slotRef }) {
         alignItems: "center",
         justifyContent: "center",
         transition: "all 0.3s",
-        minHeight: "60px",
       }}
     >
       {!filled && (
         <div style={{ textAlign: "center", pointerEvents: "none" }}>
           <div
             style={{
-              fontSize: "1.4rem",
+              fontSize: "1.5rem",
               fontWeight: 900,
               color: "rgba(255,42,109,0.2)",
               lineHeight: 1,
@@ -56,10 +55,10 @@ function Slot({ index, filled, slotRef }) {
           </div>
           <div
             style={{
-              fontSize: "6px",
+              fontSize: "7px",
               color: "rgba(255,255,255,0.25)",
               fontWeight: 700,
-              marginTop: 1,
+              marginTop: 2,
             }}
           >
             Langkah {index + 1}
@@ -95,13 +94,13 @@ function Slot({ index, filled, slotRef }) {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                padding: "3px 5px",
+                padding: "4px 6px",
               }}
             >
               <p
                 style={{
                   color: "#fff",
-                  fontSize: "6px",
+                  fontSize: "7px",
                   fontWeight: 700,
                   textAlign: "center",
                   margin: 0,
@@ -113,16 +112,16 @@ function Slot({ index, filled, slotRef }) {
             <div
               style={{
                 position: "absolute",
-                top: 3,
-                left: 3,
-                width: 14,
-                height: 14,
+                top: 4,
+                left: 4,
+                width: 16,
+                height: 16,
                 borderRadius: "50%",
                 background: "rgba(255,42,109,0.9)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "6px",
+                fontSize: "7px",
                 fontWeight: 900,
                 color: "#fff",
               }}
@@ -134,14 +133,14 @@ function Slot({ index, filled, slotRef }) {
               animate={{ scale: 1 }}
               style={{
                 position: "absolute",
-                top: 3,
-                right: 3,
+                top: 4,
+                right: 4,
                 background: "#22c55e",
                 borderRadius: "50%",
                 padding: 1,
               }}
             >
-              <CheckCircle2 size={7} color="white" />
+              <CheckCircle2 size={8} color="white" />
             </motion.div>
           </motion.div>
         )}
@@ -207,12 +206,12 @@ export default function SamariaStory({ onPrev, onNext }) {
   };
 
   const NUM_STYLE = {
-    fontSize: "1.1rem",
+    fontSize: "1.2rem",
     fontWeight: 900,
     color: "#fff",
     textShadow: "0 0 10px rgba(255,42,109,0.6)",
     lineHeight: 1,
-    width: 16,
+    width: 18,
     textAlign: "center",
     flexShrink: 0,
   };
@@ -250,17 +249,17 @@ export default function SamariaStory({ onPrev, onNext }) {
         }}
       />
 
-      {/* Header - Compact */}
+      {/* Header */}
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "4px 8px",
+          padding: "6px 12px",
           borderBottom: "1px solid rgba(255,255,255,0.07)",
           background: "rgba(0,0,0,0.25)",
           flexShrink: 0,
-          minHeight: 38,
+          minHeight: 44,
         }}
       >
         <button
@@ -268,18 +267,18 @@ export default function SamariaStory({ onPrev, onNext }) {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 2,
-            padding: "4px 10px",
-            borderRadius: 14,
+            gap: 4,
+            padding: "6px 12px",
+            borderRadius: 16,
             background: "rgba(255,42,109,0.12)",
             border: "1px solid rgba(255,42,109,0.5)",
             color: "var(--primary)",
             fontWeight: 900,
-            fontSize: 8,
+            fontSize: 9,
             cursor: "pointer",
           }}
         >
-          <ChevronLeft size={10} /> Kembali
+          <ChevronLeft size={12} /> Kembali
         </button>
         <div
           style={{
@@ -288,10 +287,10 @@ export default function SamariaStory({ onPrev, onNext }) {
             alignItems: "center",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 3 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <Heart
               fill="var(--primary)"
-              size={8}
+              size={10}
               style={{ color: "var(--primary)" }}
             />
             <span
@@ -299,7 +298,7 @@ export default function SamariaStory({ onPrev, onNext }) {
                 fontWeight: 900,
                 textTransform: "uppercase",
                 letterSpacing: 1,
-                fontSize: 7,
+                fontSize: 9,
                 color: "var(--primary)",
               }}
             >
@@ -307,47 +306,47 @@ export default function SamariaStory({ onPrev, onNext }) {
             </span>
             <Heart
               fill="var(--primary)"
-              size={8}
+              size={10}
               style={{ color: "var(--primary)" }}
             />
           </div>
         </div>
-        <div style={{ display: "flex", gap: 4 }}>
+        <div style={{ display: "flex", gap: 6 }}>
           <button
             onClick={reset}
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 2,
-              padding: "3px 8px",
-              borderRadius: 14,
+              gap: 3,
+              padding: "5px 10px",
+              borderRadius: 16,
               background: "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.12)",
               color: "rgba(255,255,255,.45)",
               fontWeight: 700,
-              fontSize: 7,
+              fontSize: 8,
               cursor: "pointer",
             }}
           >
-            <RotateCcw size={8} /> Reset
+            <RotateCcw size={10} /> Reset
           </button>
           <button
             onClick={onNext}
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 2,
-              padding: "4px 10px",
-              borderRadius: 14,
+              gap: 4,
+              padding: "6px 12px",
+              borderRadius: 16,
               background: "rgba(255,42,109,0.12)",
               border: "1px solid rgba(255,42,109,0.5)",
               color: "var(--primary)",
               fontWeight: 900,
-              fontSize: 8,
+              fontSize: 9,
               cursor: "pointer",
             }}
           >
-            Lanjut <ChevronRight size={10} />
+            Lanjut <ChevronRight size={12} />
           </button>
         </div>
       </div>
@@ -357,7 +356,7 @@ export default function SamariaStory({ onPrev, onNext }) {
         style={{
           display: "flex",
           justifyContent: "center",
-          padding: "2px 4px",
+          padding: "4px 6px",
           flexShrink: 0,
         }}
       >
@@ -365,11 +364,11 @@ export default function SamariaStory({ onPrev, onNext }) {
           style={{
             display: "inline-flex",
             alignItems: "center",
-            gap: 2,
-            fontSize: 6,
+            gap: 4,
+            fontSize: 8,
             fontWeight: 700,
-            padding: "2px 10px",
-            borderRadius: 14,
+            padding: "3px 12px",
+            borderRadius: 16,
             background: "rgba(255,42,109,.1)",
             color: "rgba(255,255,255,.6)",
             border: "1px solid rgba(255,42,109,.2)",
@@ -379,32 +378,29 @@ export default function SamariaStory({ onPrev, onNext }) {
         </span>
       </div>
 
-      {/* Slot Area - FLEXIBLE HEIGHT */}
+      {/* Main Content - 16:9 Aspect Ratio Container */}
       <div
         style={{
-          padding: "6px 10px",
-          flex: "1 1 auto",
-          overflowY: "auto",
-          minHeight: "35%",
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          padding: "8px 12px",
+          overflow: "hidden",
+          minHeight: 0,
         }}
       >
+        {/* Slot Grid - 2x2 dengan 16:9 aspect ratio */}
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 5,
-            height: "100%",
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: 6,
+            width: "100%",
+            flex: "1 1 auto",
+            minHeight: 0,
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "stretch",
-              gap: 4,
-              flex: 1,
-              minHeight: "50px",
-            }}
-          >
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <span style={NUM_STYLE}>1</span>
             <Slot
               index={0}
@@ -412,15 +408,7 @@ export default function SamariaStory({ onPrev, onNext }) {
               slotRef={(el) => (slotRefs.current[0] = el)}
             />
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "stretch",
-              gap: 4,
-              flex: 1,
-              minHeight: "50px",
-            }}
-          >
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <span style={NUM_STYLE}>2</span>
             <Slot
               index={1}
@@ -428,15 +416,7 @@ export default function SamariaStory({ onPrev, onNext }) {
               slotRef={(el) => (slotRefs.current[1] = el)}
             />
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "stretch",
-              gap: 4,
-              flex: 1,
-              minHeight: "50px",
-            }}
-          >
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <span style={NUM_STYLE}>3</span>
             <Slot
               index={2}
@@ -444,15 +424,7 @@ export default function SamariaStory({ onPrev, onNext }) {
               slotRef={(el) => (slotRefs.current[2] = el)}
             />
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "stretch",
-              gap: 4,
-              flex: 1,
-              minHeight: "50px",
-            }}
-          >
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <span style={NUM_STYLE}>4</span>
             <Slot
               index={3}
@@ -461,128 +433,132 @@ export default function SamariaStory({ onPrev, onNext }) {
             />
           </div>
         </div>
-      </div>
 
-      {/* Pool - FLEXIBLE */}
-      <div
-        style={{
-          flex: "0 0 auto",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          padding: "6px 10px 8px",
-          position: "relative",
-          maxHeight: "35%",
-          overflowY: "auto",
-        }}
-      >
+        {/* Pool - Draggable Cards */}
         <div
           style={{
-            display: "inline-block",
-            padding: "2px 12px",
-            borderRadius: 14,
-            marginBottom: 4,
-            background:
-              "linear-gradient(90deg,rgba(255,42,109,.85),rgba(180,0,180,.85))",
-            color: "#fff",
-            fontSize: 6,
-            fontWeight: 900,
-            letterSpacing: 1,
-          }}
-        >
-          ✦ PILIH & SERET GAMBAR ✦
-        </div>
-        <div
-          style={{
+            flex: "0 0 auto",
             display: "flex",
-            gap: 6,
-            width: "100%",
-            justifyContent: "center",
-            flexWrap: "wrap",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "8px 0 6px",
+            position: "relative",
+            marginTop: 6,
+            borderTop: "1px solid rgba(255,42,109,0.15)",
           }}
         >
-          <AnimatePresence>
-            {pool.map((item) => (
-              <motion.div
-                key={item.id}
-                drag
-                dragSnapToOrigin
-                dragElastic={0.08}
-                dragMomentum={false}
-                whileHover={{ scale: 1.02 }}
-                whileDrag={{ scale: 1.05, zIndex: 999, cursor: "grabbing" }}
-                onDragEnd={(e, info) => onDragEnd(e, info, item)}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.75 }}
-                style={{
-                  width: "45%",
-                  maxWidth: "85px",
-                  aspectRatio: "3/2",
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  border: "2px solid rgba(255,42,109,0.4)",
-                  background: "#1a0a1a",
-                  cursor: "grab",
-                  boxShadow: "0 3px 12px rgba(0,0,0,0.45)",
-                  position: "relative",
-                }}
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  draggable={false}
-                />
-                <div
+          <div
+            style={{
+              display: "inline-block",
+              padding: "2px 14px",
+              borderRadius: 16,
+              marginBottom: 6,
+              background:
+                "linear-gradient(90deg,rgba(255,42,109,.85),rgba(180,0,180,.85))",
+              color: "#fff",
+              fontSize: 7,
+              fontWeight: 900,
+              letterSpacing: 1,
+            }}
+          >
+            ✦ PILIH & SERET GAMBAR ✦
+          </div>
+          <div
+            style={{
+              display: "flex",
+              gap: 8,
+              width: "100%",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <AnimatePresence>
+              {pool.map((item) => (
+                <motion.div
+                  key={item.id}
+                  drag
+                  dragSnapToOrigin
+                  dragElastic={0.08}
+                  dragMomentum={false}
+                  whileHover={{ scale: 1.02 }}
+                  whileDrag={{ scale: 1.05, zIndex: 999, cursor: "grabbing" }}
+                  onDragEnd={(e, info) => onDragEnd(e, info, item)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.75 }}
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top,rgba(0,0,0,.85) 45%,transparent 75%)",
-                  }}
-                />
-                <p
-                  style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    fontSize: "6px",
-                    color: "#fff",
-                    fontWeight: 700,
-                    textAlign: "center",
-                    padding: "0 4px 4px",
+                    width: "45%",
+                    maxWidth: "100px",
+                    aspectRatio: "16/9",
+                    borderRadius: 8,
+                    overflow: "hidden",
+                    border: "2px solid rgba(255,42,109,0.4)",
+                    background: "#1a0a1a",
+                    cursor: "grab",
+                    boxShadow: "0 3px 12px rgba(0,0,0,0.45)",
+                    position: "relative",
                   }}
                 >
-                  {item.title}
-                </p>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-          {pool.length === 0 && !completed && (
-            <p
-              style={{
-                fontSize: 8,
-                fontWeight: 700,
-                color: "rgba(255,255,255,.25)",
-              }}
-            >
-              🎉 Selesai!
-            </p>
-          )}
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                    draggable={false}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(to top,rgba(0,0,0,.85) 45%,transparent 75%)",
+                    }}
+                  />
+                  <p
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      fontSize: "7px",
+                      color: "#fff",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      padding: "0 4px 4px",
+                    }}
+                  >
+                    {item.title}
+                  </p>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+            {pool.length === 0 && !completed && (
+              <p
+                style={{
+                  fontSize: 10,
+                  fontWeight: 700,
+                  color: "rgba(255,255,255,.25)",
+                }}
+              >
+                🎉 Selesai!
+              </p>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Footer */}
       <div
         style={{
-          minHeight: 28,
+          minHeight: 32,
           flexShrink: 0,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "0 10px",
+          padding: "0 12px",
           borderTop: "1px solid rgba(255,255,255,0.05)",
         }}
       >
@@ -596,11 +572,11 @@ export default function SamariaStory({ onPrev, onNext }) {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: 3,
-                padding: "2px 10px",
-                borderRadius: 14,
+                gap: 4,
+                padding: "3px 12px",
+                borderRadius: 16,
                 fontWeight: 700,
-                fontSize: 8,
+                fontSize: 9,
                 background:
                   feedback.type === "success"
                     ? "rgba(34,197,94,.18)"
@@ -609,9 +585,9 @@ export default function SamariaStory({ onPrev, onNext }) {
               }}
             >
               {feedback.type === "success" ? (
-                <CheckCircle2 size={8} />
+                <CheckCircle2 size={10} />
               ) : (
-                <AlertCircle size={8} />
+                <AlertCircle size={10} />
               )}
               {feedback.msg}
             </motion.div>
@@ -621,15 +597,15 @@ export default function SamariaStory({ onPrev, onNext }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              style={{ display: "flex", gap: 4 }}
+              style={{ display: "flex", gap: 6 }}
             >
               {STEPS.map((_, i) => (
                 <div
                   key={i}
                   style={{
-                    height: 4,
+                    height: 5,
                     borderRadius: 2,
-                    width: slots[i] ? 14 : 4,
+                    width: slots[i] ? 16 : 5,
                     background: slots[i]
                       ? "var(--primary)"
                       : "rgba(255,255,255,0.18)",
@@ -657,7 +633,7 @@ export default function SamariaStory({ onPrev, onNext }) {
               justifyContent: "center",
               background: "rgba(8,1,14,0.92)",
               backdropFilter: "blur(14px)",
-              padding: "12px",
+              padding: "16px",
             }}
           >
             <motion.div
@@ -668,9 +644,9 @@ export default function SamariaStory({ onPrev, onNext }) {
                 flexDirection: "column",
                 alignItems: "center",
                 textAlign: "center",
-                padding: "18px 24px",
-                borderRadius: 18,
-                maxWidth: 240,
+                padding: "20px 28px",
+                borderRadius: 20,
+                maxWidth: 280,
                 background:
                   "linear-gradient(145deg,rgba(32,5,52,.98),rgba(16,2,26,.98))",
                 border: "2px solid rgba(255,42,109,.5)",
@@ -680,26 +656,26 @@ export default function SamariaStory({ onPrev, onNext }) {
                 animate={{ rotate: [0, 8, -8, 0], scale: [1, 1.04, 1] }}
                 transition={{ repeat: Infinity, duration: 2.6 }}
                 style={{
-                  width: 40,
-                  height: 40,
+                  width: 48,
+                  height: 48,
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginBottom: 8,
+                  marginBottom: 10,
                   background:
                     "radial-gradient(circle,rgba(255,215,0,.2),rgba(255,215,0,.04))",
                   border: "2px solid rgba(255,215,0,.4)",
                 }}
               >
-                <Star fill="#FCD34D" size={22} style={{ color: "#FCD34D" }} />
+                <Star fill="#FCD34D" size={26} style={{ color: "#FCD34D" }} />
               </motion.div>
               <h2
                 style={{
-                  fontSize: "1.2rem",
+                  fontSize: "1.4rem",
                   fontWeight: 900,
                   color: "var(--primary)",
-                  margin: "0 0 4px",
+                  margin: "0 0 6px",
                 }}
               >
                 LUAR BIASA! 🎉
@@ -707,9 +683,9 @@ export default function SamariaStory({ onPrev, onNext }) {
               <p
                 style={{
                   color: "rgba(255,255,255,.85)",
-                  fontSize: 9,
+                  fontSize: 10,
                   fontWeight: 600,
-                  margin: "0 0 3px",
+                  margin: "0 0 4px",
                 }}
               >
                 Kisah tersusun!
@@ -717,14 +693,14 @@ export default function SamariaStory({ onPrev, onNext }) {
               <p
                 style={{
                   color: "rgba(255,255,255,.42)",
-                  fontSize: 7,
+                  fontSize: 8,
                   lineHeight: 1.3,
-                  margin: "0 0 12px",
+                  margin: "0 0 14px",
                 }}
               >
                 Kasih itu berkorban! ❤️
               </p>
-              <div style={{ display: "flex", gap: 4, width: "100%" }}>
+              <div style={{ display: "flex", gap: 6, width: "100%" }}>
                 <button
                   onClick={reset}
                   style={{
@@ -732,18 +708,18 @@ export default function SamariaStory({ onPrev, onNext }) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 2,
-                    padding: "6px 0",
-                    borderRadius: 10,
+                    gap: 3,
+                    padding: "8px 0",
+                    borderRadius: 12,
                     fontWeight: 700,
-                    fontSize: 9,
+                    fontSize: 10,
                     background: "rgba(255,255,255,.05)",
                     border: "1px solid rgba(255,255,255,.13)",
                     color: "rgba(255,255,255,.5)",
                     cursor: "pointer",
                   }}
                 >
-                  <RotateCcw size={10} /> Main Lagi
+                  <RotateCcw size={12} /> Main Lagi
                 </button>
                 <button
                   onClick={onNext}
@@ -752,11 +728,11 @@ export default function SamariaStory({ onPrev, onNext }) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 2,
-                    padding: "6px 0",
-                    borderRadius: 10,
+                    gap: 3,
+                    padding: "8px 0",
+                    borderRadius: 12,
                     fontWeight: 900,
-                    fontSize: 9,
+                    fontSize: 10,
                     background:
                       "linear-gradient(135deg,var(--primary),var(--secondary))",
                     border: "none",
@@ -764,7 +740,7 @@ export default function SamariaStory({ onPrev, onNext }) {
                     cursor: "pointer",
                   }}
                 >
-                  Lanjut <ChevronRight size={12} />
+                  Lanjut <ChevronRight size={14} />
                 </button>
               </div>
             </motion.div>
